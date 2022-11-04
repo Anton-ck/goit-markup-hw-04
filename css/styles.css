@@ -19,7 +19,9 @@ body {
   font-size: var(--primary-font-size); /* fixed */
 }
 
-/* Utils and clear css*/
+/* ------------------------------ */
+/* ==== Utils and clear css ======*/
+/* ------------------------------ */
 
 address {
   font-style: normal; /* fixed */
@@ -84,7 +86,7 @@ a {
 }
 
 /* ------------------------------ */
-/* Header */
+/* =========== Header ============*/
 /* ------------------------------ */
 
 .header .container {
@@ -141,7 +143,6 @@ a {
   display: flex;
   margin-left: auto;
   align-items: center;
-  outline: 2px solid black;
 }
 
 .contacts-list:not(:last-child) {
@@ -149,18 +150,22 @@ a {
 }
 
 .link-contacts {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--secondary-color);
   font-weight: 500;
 
   line-height: 1.14;
   letter-spacing: 0.02em;
-  outline: 2px solid red;
 }
-.header-icon:focus,
+
+/* .header-icon:focus,
 .header-icon:hover {
   fill: #2196f3;
-}
+} */
 
 .link-contacts:hover,
 .link-contacts:focus {
@@ -169,9 +174,8 @@ a {
 
 .header-icon {
   margin-right: 10px;
-  /* margin-top: auto;
-  margin-bottom: auto; */
-  fill: var(--secondary-color);
+
+  fill: currentColor;
 }
 
 .header.border {
@@ -183,7 +187,7 @@ a {
 }
 
 /* ------------------------------ */
-/* Order service */
+/* ======== Order service= =======*/
 /* ------------------------------ */
 
 .order {
@@ -240,11 +244,25 @@ a {
 }
 
 /* ------------------------------ */
-/* Benefits */
+/* ========== Benefits ===========*/
 /* ------------------------------ */
 
 .benefits-list {
   display: flex;
+}
+
+.benefits-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  background-color: #f5f4fa;
+}
+
+.benefits-icon {
+  fill: currentColor;
+  color: #2196f3;
 }
 
 .benefits-item:not(:last-child) {
@@ -266,7 +284,7 @@ a {
 }
 
 /* ------------------------------ */
-/* What are we doing */
+/* ====== What are we doing ======*/
 /* ------------------------------ */
 
 .doit {
@@ -293,15 +311,13 @@ a {
 }
 
 /* ------------------------------ */
-/* Our team */
+/* ========== Our Team ===========*/
 /* ------------------------------ */
 
 .team-item {
   text-align: center;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  /* box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12); */
 
   background-color: var(--thirdy-color);
 }
@@ -322,13 +338,41 @@ a {
 }
 
 .team-profession {
+  margin-bottom: 16px;
   font-size: var(--secondary-font-size);
   line-height: 1.19;
   color: var(--secondary-color);
 }
 
+.team-social-iconbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+  color: #afb1b8;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  color: var(--thirdy-color);
+  border-radius: 50px;
+  background-color: #2196f3;
+}
+
+.team-social-icon > .social-logo {
+  fill: currentColor;
+}
+
 /* ------------------------------ */
-/* Our clients */
+/* ======== Our clients  =========*/
 /* ------------------------------ */
 .clients-subtitle {
   margin-bottom: 50px;
@@ -344,8 +388,13 @@ a {
 }
 
 .clients-link {
-  display: inline-block;
+  display: flex;
   padding: 16px 32px;
+  /* width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center; */
+  color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
@@ -354,21 +403,18 @@ a {
   margin-right: 30px;
 }
 
-.clients-link:hover {
-  border-color: #2196f3;
-}
-
 .clients-logo {
-  fill: var(--secondary-color);
+  fill: currentColor;
 }
 
-.clients-link:focus .clients-logo,
-.clients-link:hover .clients-logo {
-  fill: #2196f3;
+.clients-link:focus,
+.clients-link:hover {
+  color: #2196f3;
+  border: 1px solid var(--hover-link-color);
 }
 
 /* ------------------------------ */
-/* Footer */
+/* ============ Footer ===========*/
 /* ------------------------------ */
 
 .footer {
@@ -408,7 +454,7 @@ a {
 }
 
 /* ------------------------------ */
-/* Footer social icon*/
+/* ======= Footer social icon ====*/
 /* ------------------------------ */
 
 .footer-social {
@@ -426,28 +472,31 @@ a {
   text-transform: uppercase;
 }
 
-.social-item {
+.social-link {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 10px;
   width: 44px;
   height: 44px;
+  color: var(--thirdy-color);
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.social-item:hover,
-.social-item:focus-within {
+.social-link:hover,
+.social-link:focus {
   background-color: #2196f3;
 }
 
 .social-logo {
-  display: block;
-  fill: var(--border-portfolio);
+  fill: currentColor;
 }
 
-/*---------Portfolio Style--------------*/
+/* ------------------------------ */
+/* ======= Portfolio Style =======*/
+/* ------------------------------ */
+
 .filter-list {
   display: flex;
   justify-content: center;
